@@ -44,6 +44,11 @@
     "verbose": true,
     "clearMocks": true,
     "testEnvironment": "node",
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.json"
+      }
+    },
     "moduleFileExtensions": [
       "js",
       "ts"
