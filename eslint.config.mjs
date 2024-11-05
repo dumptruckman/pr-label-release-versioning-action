@@ -3,6 +3,7 @@
 import eslintJs from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import vitestPlugin from 'eslint-plugin-vitest';
 import eslintTs from 'typescript-eslint';
 
 export default [
@@ -22,6 +23,7 @@ export default [
     files: ['**/*.js', '**/*.mjs'],
     ...eslintTs.configs.disableTypeChecked,
   },
+  vitestPlugin.configs.recommended,
   importPlugin.flatConfigs.recommended,
   importPlugin.flatConfigs.typescript,
   {
