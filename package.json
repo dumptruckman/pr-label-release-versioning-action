@@ -27,9 +27,17 @@
     "node": ">=20"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.mjs",
-    "lint": "eslint .",
-    "test": "vitest run"
+    "bundle": "npm run format:write && npm run package",
+    "ci-test": "npx vitest",
+    "coverage": "npx make-coverage-badge --output-path ./badges/coverage.svg",
+    "format:write": "npx prettier --write .",
+    "format:check": "npx prettier --check .",
+    "lint": "npx eslint .",
+    "local-action": "npx local-action . src/index.ts .env",
+    "package": "npx rollup -c rollup.config.mjs",
+    "package:watch": "npx rollup -c rollup.config.mjs -w",
+    "test": "npx vitest",
+    "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run package"
   },
   "dependencies": {
     "@actions/core": "^1.11.1"
