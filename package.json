@@ -24,7 +24,7 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc --showConfig && tsc",
+    "build": "tsc -p tsconfig.build.json",
     "lint": "eslint .",
     "test": "vitest run"
   },
