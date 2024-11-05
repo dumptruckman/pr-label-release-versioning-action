@@ -4,7 +4,7 @@
   "private": true,
   "description": "A GitHub Action that creates versioned releases based on labels from merged pull requests.",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --showConfig && tsc",
     "lint": "eslint .",
     "test": "vitest run"
   },

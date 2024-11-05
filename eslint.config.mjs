@@ -10,9 +10,11 @@ export default [
   ...eslintTs.configs.recommendedTypeChecked,
   {
     languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
       parserOptions: {
-        projectService: true,
         tsconfigRootDir: import.meta.dirname,
+        project: './tsconfig.base.json',
       },
     },
   },
