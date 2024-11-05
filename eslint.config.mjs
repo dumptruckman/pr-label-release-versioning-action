@@ -34,6 +34,7 @@ export default [
   },
   eslintPluginPrettierRecommended,
   {
+    ignores: ['dist/', 'node_modules/', 'coverage/'],
     rules: {
       'import/first': 'error',
       'import/newline-after-import': 'error',
