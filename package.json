@@ -3,10 +3,33 @@
   "version": "0.0.0",
   "private": true,
   "description": "A GitHub Action that creates versioned releases based on labels from merged pull requests.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dumptruckman/pr-label-release-versioning-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dumptruckman/pr-label-release-versioning-action/issues"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "release",
+    "versioning",
+    "pr",
+    "label",
+    "node"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
     "build": "tsc --showConfig && tsc",
     "lint": "eslint .",
     "test": "vitest run"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
@@ -21,8 +44,5 @@
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.13.0",
     "vitest": "^2.1.4"
-  },
-  "dependencies": {
-    "@actions/core": "^1.11.1"
   }
 }
