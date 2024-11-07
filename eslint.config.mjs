@@ -39,6 +39,7 @@ export default [
       'import/newline-after-import': 'error',
       'import/no-duplicates': 'error',
       'import/no-extraneous-dependencies': 'off',
+      'import/no-named-as-default': 'off',
       'import/order': [
         'error',
         {

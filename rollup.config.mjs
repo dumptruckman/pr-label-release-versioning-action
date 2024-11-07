@@ -1,3 +1,4 @@
+import nodeResolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import rollupPluginLicense from 'rollup-plugin-license';
 
@@ -10,6 +11,7 @@ export default {
   },
   plugins: [
     typescript({ tsconfig: 'tsconfig.build.json' }),
+    nodeResolve(),
     rollupPluginLicense({
       sourcemap: true,
       banner: {
